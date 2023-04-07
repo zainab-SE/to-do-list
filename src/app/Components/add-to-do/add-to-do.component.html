@@ -1,0 +1,7 @@
+<div class="container">
+<h2>Add To-Do List</h2>
+    <app-add (todoAdd)="addTodo($event)"></app-add>
+    <div *ngFor="let td of todo">
+    <app-view-to-do [todo]="td" (tdDelete)="deleteTodo($event)"></app-view-to-do>
+    </div>
+  </div>
